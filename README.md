@@ -76,8 +76,7 @@ The Email Sandbox is one of the SMTP drivers in Laravel. All you need to do is [
 
 For more on Mailtrap features and functions, read the [Mailtrap Getting Started Guide](https://help.mailtrap.io/article/12-getting-started-guide).
 
-Or learn more about [How to Handle Email Verification in Laravel](https://mailtrap.io/blog/laravel-email-verification). 
-
+Or learn more about [How to Handle Email Verification in Laravel](https://mailtrap.io/blog/laravel-email-verification).
 ----------
 # Testing API
 
@@ -393,4 +392,4 @@ Responses Example
 
 ![logo](./public/img/logo.png)
 
-### API testing via postman, download [here](./public/postman/OMNI-APP.postman_collection.json)
+### API Testing Via Postman, Download [Here](./public/postman/OMNI-APP.postman_collection.json)
