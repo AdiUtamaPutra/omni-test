@@ -196,3 +196,119 @@ Responses Example
     "message": "logout success"
 }
 ```
+
+## User Manage API (Create New User)
+
+The api can now be accessed at
+
+```http
+POST /api/users
+```
+
+Request headers
+
+| **Required** 	| **Key**              	| **Value** |
+|----------	|------------------	|------------------	|
+| yes   	| Authorization    	| Token {Bearer Token} |
+
+Token From Login: 
+
+    7|K7clmhQqNEkdBfQ0fLV4HM4APvrrJUoNL9JSLxNKe8b6b5f9
+
+Request body (form-data)
+
+| Key | Type | Description |
+| :--- | :--- | :--- |
+| `name` | `string` | **Required**. Set Username For Login |
+| `email` | `string` | **Required**. Set Email For Login |
+| `password` | `string` | **Required**. Create Password For Login |
+
+Responses Example
+
+```javascript
+{
+    "data": {
+        "id": 6,
+        "name": "test",
+        "email": "test@mail.com",
+        "password": "$2y$12$YGQDQRQiZeMstXi34W4NcOSzVohixnjeemo40yEnHPEkcpQ21Eh56",
+        "created_at": "2024-02-02T11:42:18.000000Z",
+        "updated_at": "2024-02-02T11:42:18.000000Z"
+    },
+    "message": "User created successfully.",
+    "success": true
+}
+```
+
+## User Manage API (Read All User)
+
+The api can now be accessed at
+
+```http
+GET /api/users
+```
+
+Request headers
+
+| **Required** 	| **Key**              	| **Value** |
+|----------	|------------------	|------------------	|
+| yes   	| Authorization    	| Token {Bearer Token} |
+
+Token From Login: 
+
+    7|K7clmhQqNEkdBfQ0fLV4HM4APvrrJUoNL9JSLxNKe8b6b5f9
+
+Responses Example
+
+```javascript
+{
+    "data": [
+        {
+            "id": 5,
+            "name": "admin",
+            "email": "admin@example.com",
+            "password": "$2y$12$fXc1lDcAswu342FOcg6DuuBA.V.Y/TIWA45HfeaKL75SD/Qu86Zfq",
+            "created_at": "2024-02-02T11:22:57.000000Z",
+            "updated_at": "2024-02-02T11:22:57.000000Z"
+        },
+
+        ...
+    ],
+    "message": "Fetch all user",
+    "success": true
+}
+```
+
+## User Manage API (Read by ID)
+
+The api can now be accessed at
+
+```http
+GET /api/users/{id_user}
+```
+
+Request headers
+
+| **Required** 	| **Key**              	| **Value** |
+|----------	|------------------	|------------------	|
+| yes   	| Authorization    	| Token {Bearer Token} |
+
+Token From Login: 
+
+    7|K7clmhQqNEkdBfQ0fLV4HM4APvrrJUoNL9JSLxNKe8b6b5f9
+
+Responses Example
+
+```javascript
+{
+    "data": {
+        "id": 5,
+        "name": "admin",
+        "email": "admin@example.com",
+        "password": "$2y$12$fXc1lDcAswu342FOcg6DuuBA.V.Y/TIWA45HfeaKL75SD/Qu86Zfq",
+        "created_at": "2024-02-02T11:22:57.000000Z",
+        "updated_at": "2024-02-02T11:22:57.000000Z"
+    },
+    "message": "Data user found",
+    "success": true
+}
