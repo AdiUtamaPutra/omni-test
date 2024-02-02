@@ -72,3 +72,4 @@ The Email Sandbox is one of the SMTP drivers in Laravel. All you need to do is [
     MAIL_PASSWORD=<********> //Your Mailtrap password
     MAIL_ENCRYPTION=tls
 
+For more on Mailtrap features and functions, read the [Mailtrap Getting Started Guide](https://help.mailtrap.io/article/12-getting-started-guide).
