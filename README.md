@@ -79,7 +79,7 @@ For more on Mailtrap features and functions, read the [Mailtrap Getting Started 
 
 The REST API to the example app is described below.
 
-## Authentication API (REGISTER)
+## Authentication API (Register)
 
 The api can now be accessed at
 
@@ -111,7 +111,7 @@ Responses Example
 }
 ```
 
-## Authentication API (LOGIN)
+## Authentication API (Login)
 
 The api can now be accessed at
 
@@ -142,7 +142,7 @@ Responses Example
 }
 ```
 
-## Authentication API (GET ALL USERS)
+## Authentication API (Get All Users)
 
 The api can now be accessed at
 
@@ -153,9 +153,9 @@ Request headers
 
 | **Required** 	| **Key**       | **Value** |
 |----------	|------------------	|------------------	|
-| yes   	| Authorization    	| Token {Bearer Token} |
+| Yes   	| Authorization    	| Token {Bearer Token} |
 
-Token Example 
+Token From Login: 
 
     7|K7clmhQqNEkdBfQ0fLV4HM4APvrrJUoNL9JSLxNKe8b6b5f9
 
@@ -172,7 +172,7 @@ Responses Example
 }
 ```
 
-## Authentication API (LOGOUT)
+## Authentication API (Logout)
 
 The api can now be accessed at
 
@@ -183,9 +183,9 @@ Request headers
 
 | **Required** 	| **Key**       | **Value** |
 |----------	|------------------	|------------------	|
-| yes   	| Authorization    	| Token {Bearer Token} |
+| Yes   	| Authorization    	| Token {Bearer Token} |
 
-Token Example 
+Token From Login: 
 
     7|K7clmhQqNEkdBfQ0fLV4HM4APvrrJUoNL9JSLxNKe8b6b5f9
 
