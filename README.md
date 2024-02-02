@@ -384,3 +384,9 @@ Responses Example
     "success": true
 }
 ```
+
+# Postman 
+
+![logo](./public/img/logo.png)
+
+### API testing via postman, download [here](./public/postman/OMNI-APP.postman_collection.json)

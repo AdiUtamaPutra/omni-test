@@ -1,0 +1,286 @@
+{
+	"info": {
+		"_postman_id": "8f1ee7c5-3646-4565-ae0f-4ceb0c4e2bc6",
+		"name": "OMNI-APP",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "30876078"
+	},
+	"item": [
+		{
+			"name": "CRUD",
+			"item": [
+				{
+					"name": "CREATE",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "10|o0CUy1w8WIJpIfGFfu3TzwZ6jgjqoNjNKjFOzkMpa3d373a7"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "test",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "test@mail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "test123",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://127.0.0.1:8000/api/users"
+					},
+					"response": []
+				},
+				{
+					"name": "READ ALL",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "10|o0CUy1w8WIJpIfGFfu3TzwZ6jgjqoNjNKjFOzkMpa3d373a7"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://127.0.0.1:8000/api/users"
+					},
+					"response": []
+				},
+				{
+					"name": "READ by ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "10|o0CUy1w8WIJpIfGFfu3TzwZ6jgjqoNjNKjFOzkMpa3d373a7"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://127.0.0.1:8000/api/users/5"
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "10|o0CUy1w8WIJpIfGFfu3TzwZ6jgjqoNjNKjFOzkMpa3d373a7"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "http://127.0.0.1:8000/api/users/7"
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "10|o0CUy1w8WIJpIfGFfu3TzwZ6jgjqoNjNKjFOzkMpa3d373a7"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/users/7?name=person&email=person@mail.com&password=person123",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users",
+								"7"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "person"
+								},
+								{
+									"key": "email",
+									"value": "person@mail.com"
+								},
+								{
+									"key": "password",
+									"value": "person123"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "MESS CREATE",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "21|1TF3dMrDYGsMJuBGE7obg1ZVsYf8ac0CB0NKUN1Xbf550a93"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\"name\":\"person1\",\"email\": \"user1@example.com\", \"password\": \"password1\"},\r\n    {\"name\":\"person2\",\"email\": \"user2@example.com\", \"password\": \"password2\"},\r\n    {\"name\":\"person3\",\"email\": \"user3@example.com\", \"password\": \"password3\"},\r\n    {\"name\":\"person4\",\"email\": \"user4@example.com\", \"password\": \"password4\"},\r\n    {\"name\":\"person5\",\"email\": \"user5@example.com\", \"password\": \"password5\"}\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:8000/api/users/mass-create"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "REGISTER",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/register?name=admin&email=admin@example.com&password=admin123&confirm_password=admin123",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"register"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "admin"
+						},
+						{
+							"key": "email",
+							"value": "admin@example.com"
+						},
+						{
+							"key": "password",
+							"value": "admin123"
+						},
+						{
+							"key": "confirm_password",
+							"value": "admin123"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LOGIN",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "admin@example.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "admin123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/login?email=test@gmail.com&password=admin123",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "test@gmail.com"
+						},
+						{
+							"key": "password",
+							"value": "admin123"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "USER",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "10|o0CUy1w8WIJpIfGFfu3TzwZ6jgjqoNjNKjFOzkMpa3d373a7"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:8000/api/user"
+			},
+			"response": []
+		},
+		{
+			"name": "LOGOUT",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "10|o0CUy1w8WIJpIfGFfu3TzwZ6jgjqoNjNKjFOzkMpa3d373a7"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"url": "http://127.0.0.1:8000/api/logout"
+			},
+			"response": []
+		}
+	]
+}
