@@ -59,6 +59,8 @@ The Laravel sample project is now up and running! Access it at http://localhost:
 ----------
 # Handle Email Verification Using Mailtrap
 
+![logo](./public/img/mailtrap-logo.png)
+
 Since our Laravel app will send a confirmation email, we need to set up the email configuration in the .env file.
 
 For email testing purposes, we’ll use [Mailtrap Email Testing](https://mailtrap.io/email-sandbox/), an Email Sandbox that captures SMTP traffic from staging and allows developers to debug emails without the risk of spamming users.
@@ -73,6 +75,7 @@ The Email Sandbox is one of the SMTP drivers in Laravel. All you need to do is [
     MAIL_ENCRYPTION=tls
 
 For more on Mailtrap features and functions, read the [Mailtrap Getting Started Guide](https://help.mailtrap.io/article/12-getting-started-guide).
+Or learn more about [How to Handle Email Verification in Laravel](https://mailtrap.io/blog/laravel-email-verification). 
 
 ----------
 # Testing API
