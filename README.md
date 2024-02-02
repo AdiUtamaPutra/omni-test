@@ -23,6 +23,10 @@ Copy the example env file and make the required configuration changes in the .en
 
     cp .env.example .env
 
+Generate a new application key
+
+    php artisan key:generate
+
 Run the database migrations (**Set the database connection in .env before migrating**)
 
     php artisan migrate
@@ -33,11 +37,23 @@ Start the local development server
 
 You can now access the server at http://localhost:8000
     
-**Make sure you set the correct database connection information before running the migrations** [Environment variables](#environment-variables)
+----------
+# Handle Email Verification Using Mailtrap
 
-    php artisan migrate
-    php artisan serve
+Since our Laravel app will send a confirmation email, we need to set up the email configuration in the .env file.
 
+For email testing purposes, we’ll use Mailtrap Email Testing, an Email Sandbox that captures SMTP traffic from staging and allows developers to debug emails without the risk of spamming users.
+
+The Email Sandbox is one of the SMTP drivers in Laravel. All you need to do is sign up and add your credentials to .env, as follows:
+
+    MAIL_MAILER=smtp  
+    MAIL_HOST=smtp.mailtrap.io  
+    MAIL_PORT=2525  
+    MAIL_USERNAME=<********> //Your Mailtrap username  
+    MAIL_PASSWORD=<********> //Your Mailtrap password
+    MAIL_ENCRYPTION=tls
+
+For more on Mailtrap features and functions, read the Mailtrap Getting Started Guide.
 ----------
 
 # Testing API
