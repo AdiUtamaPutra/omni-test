@@ -88,7 +88,7 @@ class UserController extends Controller
         ]);
         return response()->json([
             'data' => new UserResource($user),
-            'message' => 'User created successfully.',
+            'message' => 'User updated successfully.',
             'success' => true
         ]);
 

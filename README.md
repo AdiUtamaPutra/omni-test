@@ -312,3 +312,75 @@ Responses Example
     "message": "Data user found",
     "success": true
 }
+```
+
+## User Manage API (Update User)
+
+The api can now be accessed at
+
+```http
+PUT /api/users/{id_user}
+```
+
+Request headers
+
+| **Required** 	| **Key**              	| **Value** |
+|----------	|------------------	|------------------	|
+| yes   	| Authorization    	| Token {Bearer Token} |
+
+Token From Login: 
+
+    7|K7clmhQqNEkdBfQ0fLV4HM4APvrrJUoNL9JSLxNKe8b6b5f9
+
+Request body (form-data)
+
+| Key | Type | Description |
+| :--- | :--- | :--- |
+| `name` | `string` | **Required**. Update Username For Login |
+| `email` | `string` | **Required**. Update Email For Login |
+| `password` | `string` | **Required**. Update New Password For Login |
+
+Responses Example
+
+```javascript
+{
+    "data": {
+        "id": 7,
+        "name": "person",
+        "email": "person@mail.com",
+        "password": "$2y$12$K3PrEMV7cZ.LGy2Ryoh.NumMK2SVRFoUC7DAVa3otiaG0ayjsfKja",
+        "created_at": "2024-02-02T11:56:52.000000Z",
+        "updated_at": "2024-02-02T11:57:05.000000Z"
+    },
+    "message": "User updated successfully.",
+    "success": true
+}
+```
+
+## User Manage API (Delete User)
+
+The api can now be accessed at
+
+```http
+DELETE /api/users/{id_user}
+```
+
+Request headers
+
+| **Required** 	| **Key**              	| **Value** |
+|----------	|------------------	|------------------	|
+| yes   	| Authorization    	| Token {Bearer Token} |
+
+Token From Login: 
+
+    7|K7clmhQqNEkdBfQ0fLV4HM4APvrrJUoNL9JSLxNKe8b6b5f9
+
+Responses Example
+
+```javascript
+{
+    "data": [],
+    "message": "User deleted successfully",
+    "success": true
+}
+```
