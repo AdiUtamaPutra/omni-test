@@ -29,6 +29,13 @@ Generate a new application key
 
 Run the database migrations (**Set the database connection in .env before migrating**)
 
+    DB_CONNECTION=mysql
+    DB_HOST=127.0.0.1
+    DB_PORT=3306
+    DB_DATABASE=dblaravel
+    DB_USERNAME=root
+    DB_PASSWORD=
+
     php artisan migrate
 
 Start the local development server
@@ -42,9 +49,9 @@ You can now access the server at http://localhost:8000
 
 Since our Laravel app will send a confirmation email, we need to set up the email configuration in the .env file.
 
-For email testing purposes, we’ll use Mailtrap Email Testing, an Email Sandbox that captures SMTP traffic from staging and allows developers to debug emails without the risk of spamming users.
+For email testing purposes, we’ll use [Mailtrap Email Testing](https://mailtrap.io/email-sandbox/), an Email Sandbox that captures SMTP traffic from staging and allows developers to debug emails without the risk of spamming users.
 
-The Email Sandbox is one of the SMTP drivers in Laravel. All you need to do is sign up and add your credentials to .env, as follows:
+The Email Sandbox is one of the SMTP drivers in Laravel. All you need to do is [sign up](https://mailtrap.io/register/signup?ref=header) and add your credentials to .env, as follows:
 
     MAIL_MAILER=smtp  
     MAIL_HOST=smtp.mailtrap.io  
@@ -53,7 +60,8 @@ The Email Sandbox is one of the SMTP drivers in Laravel. All you need to do is s
     MAIL_PASSWORD=<********> //Your Mailtrap password
     MAIL_ENCRYPTION=tls
 
-For more on Mailtrap features and functions, read the Mailtrap Getting Started Guide.
+
+For more on Mailtrap features and functions, read the [Mailtrap Getting Started Guide](https://help.mailtrap.io/article/12-getting-started-guide).
 ----------
 
 # Testing API
