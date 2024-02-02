@@ -1,42 +1,44 @@
-
 # Getting started
 
-## Installation
+> Laravel sample website with content retrieving from [prismic.io](https://prismic.io)
 
-Please check the official laravel installation guide for server requirements before you start. [Official Documentation](https://laravel.com/docs/5.4/installation#installation)
+This project runs with Laravel version 10.
 
-Alternative installation is possible without local dependencies relying on [Docker](#docker). 
+## Getting started
 
-Clone the repository
+Assuming you've already installed on your machine: PHP (>= 8.0.0) and [Node.js](https://nodejs.org).
 
-    git clone https://github.com/AdiUtamaPutra/omni-test.git
+``` bash
+# Clone the repository
+git clone https://github.com/AdiUtamaPutra/omni-test.git
 
-Switch to the repo folder
+#Switch to the repo folder
+cd omni-test
 
-    cd omni-app
+# install dependencies
+composer install
+npm install
 
-Install all the dependencies using composer
+# create .env file and generate the application key
+cp .env.example .env
+php artisan key:generate
 
-    composer install
+#Run the database migrations (**Set the database connection in .env before migrating**)
+php artisan migrate
 
-Copy the example env file and make the required configuration changes in the .env file
+# build CSS and JS assets
+npm run dev
 
-    cp .env.example .env
+```
 
-Generate a new application key
+Then launch the server:
 
-    php artisan key:generate
+``` bash
+php artisan serve
+```
 
-Run the database migrations (**Set the database connection in .env before migrating**)
+The Laravel sample project is now up and running! Access it at http://localhost:8000.
 
-    php artisan migrate
-
-Start the local development server
-
-    php artisan serve
-
-You can now access the server at http://localhost:8000
-    
 ----------
 # Handle Email Verification Using Mailtrap
 
@@ -53,24 +55,3 @@ The Email Sandbox is one of the SMTP drivers in Laravel. All you need to do is [
     MAIL_PASSWORD=<********> //Your Mailtrap password
     MAIL_ENCRYPTION=tls
 
-# Testing API
-
-Run the laravel development server
-
-    php artisan serve
-
-The api can now be accessed at
-
-    http://localhost:8000/api
-
-Request headers
-
-| **Required** 	| **Key**              	| **Value**            	|
-|----------	|------------------	|------------------	|
-| Yes      	| Content-Type     	| application/json 	|
-| Yes      	| X-Requested-With 	| XMLHttpRequest   	|
-| Optional 	| Authorization    	| Token {JWT}      	|
-
-Refer the [api specification](#api-specification) for more info.
-
-----------
