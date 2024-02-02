@@ -95,7 +95,7 @@ Request parameter
 | `password` | `string` | **Required**. Create Password For Login |
 | `confirm_password` | `string` | **Required**. Confirm Password |
 
-### Responses
+Responses Example
 
 ```javascript
 {
@@ -132,12 +132,67 @@ Request body (form-data)
 | `email` | `string` | **Required**. Set Email For Login |
 | `password` | `string` | **Required**. Set Password For Login |
 
-### Responses
+Responses Example
 
 ```javascript
 {
     "message": "Login success",
     "access_token": "2|CpiQjpSvUO3B8b6xQBUCYR3CXuHKrdF8zTMjyKLGabd94a5e",
     "token_type": "Bearer"
+}
+```
+
+## Authentication API (GET ALL USERS)
+
+The api can now be accessed at
+
+```http
+GET /api/user
+```
+Request headers
+
+| **Required** 	| **Key**       | **Value** |
+|----------	|------------------	|------------------	|
+| yes   	| Authorization    	| Token {Bearer Token} |
+
+Token Example 
+
+    7|K7clmhQqNEkdBfQ0fLV4HM4APvrrJUoNL9JSLxNKe8b6b5f9
+
+Responses Example
+
+```javascript
+{
+    "id": 5,
+    "name": "admin",
+    "email": "admin@example.com",
+    "email_verified_at": null,
+    "created_at": "2024-02-02T11:22:57.000000Z",
+    "updated_at": "2024-02-02T11:22:57.000000Z"
+}
+```
+
+## Authentication API (LOGOUT)
+
+The api can now be accessed at
+
+```http
+POST /api/logout
+```
+Request headers
+
+| **Required** 	| **Key**       | **Value** |
+|----------	|------------------	|------------------	|
+| yes   	| Authorization    	| Token {Bearer Token} |
+
+Token Example 
+
+    7|K7clmhQqNEkdBfQ0fLV4HM4APvrrJUoNL9JSLxNKe8b6b5f9
+
+Responses Example
+
+```javascript
+{
+    "message": "logout success"
 }
 ```
