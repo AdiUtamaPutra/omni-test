@@ -1,6 +1,15 @@
-# Getting started
+# LARAVEL PROJECT TEST
 
-> Laravel sample website with content retrieving from [prismic.io](https://prismic.io)
+> Laravel sample project test is a project intended for job entrance test needs.
+
+> The criteria are:
+> 1. Please setup laravel project with following requirements:
+>     Has basic authentication to access the Dashboard
+>     Has authentication for api
+> 2. Create CRUD interface also acessible via api for user data followed by Unit test
+> 3. Log every http request sent to the app
+> 4. Send email for email confirmation after new user created. (Implement queue)
+> 5. reate an api endpoint for mass user creation in single call. The endpoint must be capable to handle upto 1000 email & password in request body.
 
 This project runs with Laravel version 10.
 
@@ -23,7 +32,15 @@ npm install
 cp .env.example .env
 php artisan key:generate
 
-#Run the database migrations (**Set the database connection in .env before migrating**)
+#Set the database connection in .env before migrating
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=laravel
+DB_USERNAME=root
+DB_PASSWORD=
+
+#Run the database migrations
 php artisan migrate
 
 # build CSS and JS assets
