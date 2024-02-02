@@ -73,3 +73,38 @@ The Email Sandbox is one of the SMTP drivers in Laravel. All you need to do is [
     MAIL_ENCRYPTION=tls
 
 For more on Mailtrap features and functions, read the [Mailtrap Getting Started Guide](https://help.mailtrap.io/article/12-getting-started-guide).
+
+----------
+# Testing API
+
+The REST API to the example app is described below.
+
+## Authentication Api
+
+### REGISTER
+
+```http
+POST /api/register
+```
+| Parameter | Type | Description |
+| :--- | :--- | :--- |
+| `name` | `string` | **Required**. Set Username For Login |
+| `email` | `string` | **Required**. Set Email For Login |
+| `password` | `string` | **Required**. Create Password For Login |
+| `confirm_password` | `string` | **Required**. Confirm Password |
+
+### Responses
+
+```javascript
+{
+  "data": {
+        "name": "admin",
+        "email": "admin@example.com",
+        "updated_at": "2024-02-02T10:57:04.000000Z",
+        "created_at": "2024-02-02T10:57:04.000000Z",
+        "id": 3
+    },
+    "access_token": "1|4ygfzFd9L0x9us9VY9KqQyeN3KyLGSmnM0fciFxU4b6be08e",
+    "token_type": "Bearer"
+}
+```
