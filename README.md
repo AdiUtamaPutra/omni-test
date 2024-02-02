@@ -29,13 +29,6 @@ Generate a new application key
 
 Run the database migrations (**Set the database connection in .env before migrating**)
 
-    DB_CONNECTION=mysql
-    DB_HOST=127.0.0.1
-    DB_PORT=3306
-    DB_DATABASE=dblaravel
-    DB_USERNAME=root
-    DB_PASSWORD=
-
     php artisan migrate
 
 Start the local development server
@@ -59,7 +52,6 @@ The Email Sandbox is one of the SMTP drivers in Laravel. All you need to do is [
     MAIL_USERNAME=<********> //Your Mailtrap username  
     MAIL_PASSWORD=<********> //Your Mailtrap password
     MAIL_ENCRYPTION=tls
-
 
 For more on Mailtrap features and functions, read the [Mailtrap Getting Started Guide](https://help.mailtrap.io/article/12-getting-started-guide).
 ----------
