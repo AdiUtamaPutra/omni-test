@@ -79,13 +79,15 @@ For more on Mailtrap features and functions, read the [Mailtrap Getting Started 
 
 The REST API to the example app is described below.
 
-## Authentication Api
+## Authentication API (REGISTER)
 
-### REGISTER
+The api can now be accessed at
 
 ```http
 POST /api/register
 ```
+Request parameter
+
 | Parameter | Type | Description |
 | :--- | :--- | :--- |
 | `name` | `string` | **Required**. Set Username For Login |
@@ -105,6 +107,37 @@ POST /api/register
         "id": 3
     },
     "access_token": "1|4ygfzFd9L0x9us9VY9KqQyeN3KyLGSmnM0fciFxU4b6be08e",
+    "token_type": "Bearer"
+}
+```
+
+## Authentication API (LOGIN)
+
+The api can now be accessed at
+
+```http
+POST /api/login
+```
+Request parameter
+
+| Parameter | Type | Description |
+| :--- | :--- | :--- |
+| `email` | `string` | **Required**. Set Email For Login |
+| `password` | `string` | **Required**. Set Password For Login |
+
+Request body (form-data)
+
+| Key | Type | Description |
+| :--- | :--- | :--- |
+| `email` | `string` | **Required**. Set Email For Login |
+| `password` | `string` | **Required**. Set Password For Login |
+
+### Responses
+
+```javascript
+{
+    "message": "Login success",
+    "access_token": "2|CpiQjpSvUO3B8b6xQBUCYR3CXuHKrdF8zTMjyKLGabd94a5e",
     "token_type": "Bearer"
 }
 ```
