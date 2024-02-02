@@ -11,7 +11,7 @@
 > 4. Send email for email confirmation after new user created. (Implement queue)
 > 5. reate an api endpoint for mass user creation in single call. The endpoint must be capable to handle upto 1000 email & password in request body.
 
-This project runs with Laravel version 10.
+This project runs with Laravel version 10.10
 
 ## Getting started
 
@@ -74,9 +74,8 @@ The Email Sandbox is one of the SMTP drivers in Laravel. All you need to do is [
     MAIL_PASSWORD=<********> //Your Mailtrap password
     MAIL_ENCRYPTION=tls
 
-For more on Mailtrap features and functions, read the [Mailtrap Getting Started Guide](https://help.mailtrap.io/article/12-getting-started-guide).
+For more on Mailtrap features and functions, read the [Mailtrap Getting Started Guide](https://help.mailtrap.io/article/12-getting-started-guide) or learn more about [How to Handle Email Verification in Laravel](https://mailtrap.io/blog/laravel-email-verification).
 
-Or learn more about [How to Handle Email Verification in Laravel](https://mailtrap.io/blog/laravel-email-verification).
 ----------
 # Testing API
 
